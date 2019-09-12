@@ -13,5 +13,5 @@
 int main(int argc, char** argv) { //main为主函数，入口文件
 //	std::cout<<"4+4="; //也可以使用using namespace std;先声明名字空间
 //	std::cout<<4+4;
-	std::cout<<"4+4="<<4+4; //合到一行
+	std::cout<<"4+4="<<4+4<<"哈"; //合到一行
 }
