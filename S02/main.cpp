@@ -4,24 +4,44 @@ using namespace std;
 int main()
 {
     //第一个程序，换行
-    cout << "人要是行干一行行一行一行行行行行人要是不行干一行不行一行一行不行行行不行。";
+    cout << "人要是行" << endl;
+    cout << "干一行" << endl;
+    cout << "行一行" << endl;
+    cout << "一行行" << endl;
+    cout << "行行行" << endl;
+    cout << "人要是不行" << endl;
+    cout << "干一行" << endl;
+    cout << "不行一行" << endl;
+    cout << "一行不行" << endl;
+    cout << "行行不行" << endl;
+    //做个试验 ,两数交换
+    int x = 1, y = 2, z = 3;
+    z = x;
+    x = y;
+    y = z;
+    cout << "x=" << x << "y=" << y << "z=" << z;
     //...........................
     //第二个程序，变量的改变
-    int litchi;
-    litchi = 22;
-    cout << "litch=" << litchi << endl;
+    int litchi = 22;
+    cout << litchi << endl;
     litchi = 33;
-    cout << "litch=" << litchi << endl;
-    litchi = litchi / 3;
-    cout << "litch=" << litchi << endl;
+    cout << litchi << endl;
     //...........................
     //第三个程序,变量类型的转换
-    int money = 23.5;
-    cout << "money=" << money << endl;
+    float money = 23.5; //int
+    cout << money;
     //...........................
-    //第四个程序,三角形的面积
-    int altitude = 2, base = 4, area;
-    area = altitude * base / 2;
-    cout << "area=" << area << endl;
+    //第四个程序,三角形的面积S=a*h/2
+    float a = 2, h = 4, s;
+    s = a * h / 2;
+    cout << s << endl;
+
+    //尝试以下算式
+    //写一个程序，当输入正方形边长，返回它的面积。S=a*a
+    float a2, s2;
+    cin >> a2;
+    s2 = a2 * a2;
+    cout << s2;
+
     return 0;
 }
