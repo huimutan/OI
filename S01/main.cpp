@@ -1,12 +1,18 @@
-#include <iostream> //Í·ÎÄ¼şiostream°üº¬ÁËcout º¯Êı 
-int main(int argc, char** argv) { //mainÎªÖ÷º¯Êı£¬Èë¿ÚÎÄ¼ş
-//µÚÒ»¸ö³ÌĞò£¬×Ô¶¯Éú³É
-std::cout << "Hello world!\n";//Ãû×Ö¿Õ¼ästdÀïÓĞcout£¬
-//ÕâÀï¿ÉÒÔ¼ÓÈëÄãµÄ´úÂë
+#include <iostream>
+using namespace std; 
+int main(int argc, char** argv) {
+//ç¬¬ä¸€ä¸ªç¨‹åºï¼Œè‡ªåŠ¨ç”Ÿæˆ
+std::cout << "Hello world!\n";//åå­—ç©ºé—´stdé‡Œæœ‰coutï¼Œ
+//è¿™é‡Œå¯ä»¥åŠ å…¥ä½ çš„ä»£ç 
 
 //...........................
-    //µÚ¶ş¸ö³ÌĞò£¬Êä³ö
-//	std::cout<<"4+4="; //Ò²¿ÉÒÔÊ¹ÓÃusing namespace stdÏÈÉùÃ÷Ãû×Ö¿Õ¼ä£¬Ãû×Ö¿Õ¼ästdÀïÓĞcout£¬
+    //ç¬¬äºŒä¸ªç¨‹åºï¼Œè¾“å‡º
+//	std::cout<<"4+4="; //ä¹Ÿå¯ä»¥ä½¿ç”¨using namespace stdå…ˆå£°æ˜åå­—ç©ºé—´ï¼Œåå­—ç©ºé—´stdé‡Œæœ‰coutï¼Œ
 //	std::cout<<4+4;
-	std::cout<<"4+4="<<4+4; //ºÏµ½Ò»ĞĞ
+	std::cout<<"4+4="<<4+4; //åˆåˆ°ä¸€è¡Œ
+	
+  return 0; 
+	
 }
+ 
+
