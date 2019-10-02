@@ -4,10 +4,10 @@ using namespace std;
 int main()
 {
 
-    int strawberry;  //定义一个名字为草莓的变量
+    int strawberry;             //定义一个名字为草莓的变量
     cout << strawberry << endl; //定义变量不赋值，初始值是随机的
-    strawberry = 1;  //为变量赋值
-    strawberry = 11; //修改变量的值，当新数据存到变量中时，变量由原来的值改为新值。
+    strawberry = 1;             //为变量赋值
+    strawberry = 11;            //修改变量的值，当新数据存到变量中时，变量由原来的值改为新值。
     //int strawberry; //再次定义草莓的值，可以吗? 内存中不能有两个相同变量名的区域。
     int peach = 2, pitaya = 3;
     //同理定义桃子和火龙果，定义同时赋值。
@@ -15,8 +15,7 @@ int main()
     //...........................
 
     //三角形的面积S=a*h/2
-    double a = 3,
-           h = 5, s;
+    double a = 3, h = 5, s;
     s = a * h / 2;
     cout << s << endl;
 
