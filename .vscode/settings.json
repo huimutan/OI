@@ -2,6 +2,9 @@
     "files.defaultLanguage": "cpp", // ctrl+N新建文件后默认的语言
     "editor.formatOnType": true, // 输入时就进行格式化，默认触发字符较少，分号可以触发
     "editor.snippetSuggestions": "top", // snippets代码优先显示补全
+    
+    //"editor.fontSize": 28,// 以像素为单位控制字号。
+    "editor.mouseWheelZoom": true,// 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
 
     "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入
     "code-runner.executorMap": {
