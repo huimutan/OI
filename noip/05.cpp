@@ -2,7 +2,7 @@
 #include <iomanip>
 using namespace std;
 int main(){
-    //å†™ä»£ç 
+    //1031: ¡¾ÈëÃÅ¡¿ÎÂ¶È×ª»»
     int c;
     double f;
     cin >> c;

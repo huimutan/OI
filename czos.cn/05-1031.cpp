@@ -23,7 +23,7 @@ int main()
     int c;//摄氏度
     double f;//华氏度
     cin >> c;             //输入摄氏度
-    f = 9 / 5 * c + 32;
+    f = 9.0 / 5 * c + 32;
     //输出结果四舍五入保留两位小数
     cout << fixed << setprecision(2)<< f << endl; //计算华氏度
     
