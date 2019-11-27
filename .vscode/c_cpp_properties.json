@@ -2,19 +2,12 @@
     "configurations": [
         {
             "name": "Win32",
-            "intelliSenseMode": "clang-x64",
-            "compilerPath": "D:/02Run/DevCPP/mingw64/bin/gcc.exe",
+            "intelliSenseMode": "${default}",
+            "compilerPath": "D:/02Run/DevCPP/mingw64/bin/g++.exe",
             "includePath": [
-                "D:/02Run/DevCPP/mingw64/include/*",
-                "D:/02Run/DevCPP/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/*",
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "_UNICODE",
-                "__GNUC__=7",
-                "__cdecl=__attribute__((__cdecl__))"
-            ],
+            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
             "browse": {
                 "path": [
                     "${workspaceFolder}/**"
