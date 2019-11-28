@@ -1,11 +1,4 @@
-// #include <bits/stdc++.h>
-#include <iostream>
-#include <iomanip>
-using namespace std;
-
-int main()
-{
-  /*1303: 【入门】冷饮的价格（1）
+/*1303: 【入门】冷饮的价格（1）
   **题目描述**
   小明去冷饮店买冰激凌，如果买10个以上或者10个，2元/个，10个以下，2.2元/个，请从键盘读入小明的购买数量，计算小明应付的价格！
   **输入**
@@ -17,6 +10,13 @@ int main()
   **样例输出**
   40.0*/
 
+// #include <bits/stdc++.h>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
   int n;    //购买数量number
   double p; //代表应付价格price
   cin >> n;

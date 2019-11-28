@@ -1,11 +1,4 @@
-// #include <bits/stdc++.h>
-#include <iomanip>
-#include <iostream>
-using namespace std;
-
-int main()
-{
-  /* 1033: 【入门】判断奇偶数
+/* 1033: 【入门】判断奇偶数
    题目描述
 输入一个整数，判断是否为偶数。是输出"y e s"，否则输出"n o"。
 输入
@@ -16,6 +9,14 @@ int main()
 2
 样例输出
 y e s */
+
+// #include <bits/stdc++.h>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
 
   int n; //一个整数
   cin >> n;

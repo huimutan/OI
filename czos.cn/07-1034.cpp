@@ -1,11 +1,4 @@
-#include <bits/stdc++.h>
-// #include <iomanip>
-// #include <iostream>
-using namespace std;
-
-int main()
-{
-  /* 1034: 【入门】两数比大小
+/* 1034: 【入门】两数比大小
     题目描述
   有A，B两个不相等的数，请将其中较大数打印出来。
   输入
@@ -16,6 +9,14 @@ int main()
   45 78
   样例输出
   78 */
+
+#include <bits/stdc++.h>
+// #include <iomanip>
+// #include <iostream>
+using namespace std;
+
+int main()
+{
 
   int A, B; //比大小的两个数
   cin >> A >> B;
