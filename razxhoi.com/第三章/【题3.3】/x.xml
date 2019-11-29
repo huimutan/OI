@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="gb2312" ?> 
+<GRAMMAR LANGID="804"> 
+<RULE NAME="命令" TOPLEVEL="ACTIVE">  
+<L>  
+ <P>你好</P>    
+ <P>我要上网</P>    
+ <P>空当接龙</P>   
+ <P>再见</P>    
+<P>苹果</P>
+<P>树</P>
+<P>书</P>
+<P>水</P>
+<P>食物</P>
+<P>老师</P>
+<P>学习</P>
+<P>计算机</P>
+<P>英语</P>
+<P>商店</P>
+<P>早晨</P>
+<P>学校</P>
+<P>朋友</P>
+<P>谢谢</P>
+<P>房子</P>
+</L>    
+</RULE>    
+</GRAMMAR>    

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" ?> 
+<GRAMMAR LANGID="804"> 
+<RULE NAME="命令" TOPLEVEL="ACTIVE">  
+<L>  
+ <P>再见</P>    
+<P>我要写作</P>
+<P>我要做幻灯片</P>
+</L>    
+</RULE>    
+</GRAMMAR>    
