@@ -45,5 +45,9 @@
         "iostream": "cpp",
         "iomanip": "cpp",
         "*.tcc": "cpp"
-    } // 效果效果比cpptools要好
+    },
+    "files.exclude": {
+        "**/*.exe": true
+    } 
+    // 效果效果比cpptools要好
 }
