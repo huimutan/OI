@@ -10,8 +10,7 @@ int main()
 {
     int a, b;      //定义两个变量名
     cin >> a >> b; //从标准输入流中输入两个整数
-    cout << a << endl;
-    cout << b << endl;
+    cout << a << " " << b << endl;
     cout << a + b << endl; //输出到标准输出流中
 }
 // 完成程序以后，点击下方的提交，即可看到测试结果
