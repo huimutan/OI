@@ -42,7 +42,9 @@
         "iostream": "cpp",
         "iomanip": "cpp",
         "*.tcc": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
     },
     "files.exclude": {
         "**/*.exe": true
