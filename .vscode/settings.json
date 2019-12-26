@@ -48,6 +48,7 @@
     },
     "files.exclude": {
         "**/*.exe": true
-    } 
+    },
+    "files.encoding": "gb2312"
     
 }
