@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "intelliSenseMode": "${default}",
-            "compilerPath": "D:/02Run/DevCPP/MinGW32/bin/g++.exe",
+            "compilerPath": "D:/02Run/MinGW/mingw64/bin/g++.exe",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
