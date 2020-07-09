@@ -22,5 +22,6 @@ int main()
     int m, n;
     cin >> m >> n;
     cout << (n-m) * 30 ;
+    //system("pause");
     return 0;
 }
