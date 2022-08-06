@@ -1,54 +1,160 @@
 {
     "files.defaultLanguage": "cpp", // ctrl+N新建文件后默认的语言
     "editor.formatOnType": true, // 输入时就进行格式化，默认触发字符较少，分号可以触发
-    "editor.suggest.snippetsPreventQuickSuggestions": false, // clangd的snippets有很多的跳转点，不用这个就必须手动触发Intellisense了
-    //"editor.snippetSuggestions": "top", // snippets代码优先显示补全
-    
-    //"editor.fontSize": 28,// 以像素为单位控制字号。
-    "editor.mouseWheelZoom": true,// 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
-
-/*     "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入
-    "code-runner.ignoreSelection": true,
+    "editor.largeFileOptimizations": false,
+    "editor.suggestSelection": "first",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code','Source Han Sans CN',Consolas,'Courier New',monospace",
+    "editor.snippetSuggestions": "top", // snippets代码优先显示补全
+    "editor.fontSize": 18, // 以像素为单位控制字号。
+    "editor.mouseWheelZoom": true, // 设置成false会在“输出”中输出，无法输入
+    "files.autoSave": "afterDelay",
     "code-runner.executorMap": {
-        //"c": "cd $dir && clang $fileName -o $fileNameWithoutExt.exe -Wall -g -Og -static-libgcc -fcolor-diagnostics --target=x86_64-w64-mingw -std=c11 && $dir$fileNameWithoutExt",
-        //"c": "cd $dir && clang '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c11 && &'$dir$fileNameWithoutExt'",
-        //"cppclang": "cd $dir && clang++ $fileName -o $fileNameWithoutExt.exe -Wall -g -Og -static-libgcc -fcolor-diagnostics --target=x86_64-w64-mingw -std=c++17 && $dir$fileNameWithoutExt",
-        //"cpp": "cd $dir ; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt",
-        //"cpp": "cd $dir && clang++ $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c++17 && $dir$fileNameWithoutExt"
-        "cpp": "cd $dir ; g++ $fileName -o $fileNameWithoutExt; ./$fileNameWithoutExt"
+        "c": "cd $dir && clang $fileName -o $fileNameWithoutExt.exe -Wall -g -Og -static-libgcc -fcolor-diagnostics --target=x86_64-w64-mingw -std=c11 && $dir$fileNameWithoutExt",
+        "cppclang": "cd $dir && clang++ $fileName -o $fileNameWithoutExt.exe -Wall -g -Og -static-libgcc -fcolor-diagnostics --target=x86_64-w64-mingw -std=c++17 && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt", //c++起作用的行
+        "cpp_daicanshu": "cd $dir && g++ -fno-asm -Wall -lm --static -std=c++11 -DONLINE_JUDGE $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
     }, // 设置code runner的命令行
     "code-runner.saveFileBeforeRun": true, // run code前保存
-    "code-runner.preserveFocus": true, // 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false
-    "code-runner.clearPreviousOutput": false, // 每次run code前清空属于code runner的终端消息 */
-
+    "code-runner.preserveFocus": false, // 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false
+    "code-runner.clearPreviousOutput": false, // 每次run code前清空属于code runner的终端消息
     "C_Cpp.clang_format_sortIncludes": true, // 格式化时调整include的顺序（按字母排序）
     "C_Cpp.intelliSenseEngine": "Default", // 可以为Default或Tag Parser，后者较老，功能较简单。具体差别参考cpptools扩展文档
-    "C_Cpp.errorSquiggles": "Enabled", // 因为有clang的lint，所以关掉Enabled/Disabled
-    "C_Cpp.autocomplete": "Default", // 因为有clang的补全，所以关掉Default/Disabled
-
-    // "clang.cflags": [ // 控制c语言静态检测的参数
-    //     "--target=x86_64-w64-mingw",
-    //     "-std=c11",
-    //     "-Wall"
-    // ],
-    // "clang.cxxflags": [ // 控制c++静态检测时的参数
-    //     "--target=x86_64-w64-mingw",
-    //     "-std=c++11",
-    //     "-Wall"
-    // ],
-    //"clang.completion.enable": true,
+    "C_Cpp.errorSquiggles": "Enabled", // 因为有clang的lint，所以关掉
+    "C_Cpp.autocomplete": "Default", // 因为有clang的补全，所以关掉
+    "editor.minimap.enabled": true,
+    "[cpp]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "[c]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "clang.cflags": [ // 控制c语言静态检测的参数
+        "--target=x86_64-w64-mingw",
+        "-std=c11",
+        "-Wall"
+    ],
+    "clang.cxxflags": [ // 控制c++静态检测时的参数
+        "--target=x86_64-w64-mingw",
+        "-std=c++14",
+        "-Wall"
+    ],
+    "C_Cpp.default.compilerPath": "D:\\mingw64\\bin\\g++.exe",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "clang.completion.enable": true,
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",
         "iomanip": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
         "*.tcc": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "cfenv": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "cinttypes": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "codecvt": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cuchar": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
         "random": "cpp",
+        "ratio": "cpp",
+        "regex": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "fstream": "cpp",
+        "future": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "scoped_allocator": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
         "typeindex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "valarray": "cpp"
     },
     "files.exclude": {
         "**/*.exe": true
     },
-    "files.encoding": "gb2312"
-    
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.showStopIconInEditorTitleMenu": false,
+    "code-runner.languageIdToFileExtensionMap": {
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    "terminal.integrated.fontSize": 18,
+    "files.encoding": "gbk",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.md": "cweijan.markdownViewer"
+    },
+    //"editor.autoClosingBrackets": "never",
+    //"editor.autoSurround": "never",
+    //"vscode-office.autoTheme": true,
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "editor.formatOnSave": true,
+    "files.autoGuessEncoding": true,
+    // 解决终端中文乱码
+    // "terminal.integrated.profiles.windows": {
+    //     "powershell": {
+    //         "source": "PowerShell",
+    //         "args": [
+    //             "chcp 65001; powershell -NoLogo"
+    //         ]
+    //     }
+    // }
+    //"terminal.integrated.defaultProfile.windows": "powershell",
+    //"terminal.integrated.fontFamily": "Lucida Console"
 }
