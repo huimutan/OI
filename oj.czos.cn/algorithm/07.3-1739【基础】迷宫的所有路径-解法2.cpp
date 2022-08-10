@@ -35,7 +35,7 @@ using namespace std;
 //右、下、左、上
 /*
 思路：沿着右、下、左、 上的顺序深度优先搜索， 走过的点标记为true
-递归其他方向，递归结束， 后退到上一步，撤销标记， 回溯到前一个状态
+递归其他方向，递归结束，后退到上一步， 撤销标记，回溯到前一个状态
 */
 int n, c;
 int r[30][3];    //存储路径
@@ -51,34 +51,38 @@ void print(int k) {
   }
   cout << n << "," << n << endl;
 }
-//深搜存储路径： 将 xy 点存储到 r 数组下标为 k 的位置
-void dfs(int x, int y, int k) {
-  r[k][1] = x;
-  r[k][2] = y;
-  //如果到了终点，打印
-  if (x == n && y == n) {
-    print(k);
-    return;
-  }
+//深搜存储路径： 将 xy 点存储到 r 数组 下标为k的位置
+void dfs(int k) {
   //尝试不同的方向
   int tx, ty;
   for (int i = 1; i <= 4; i++) {
-    tx = x + fx[i];
-    ty = y + fy[i];
+    tx = r[k - 1][1] + fx[i];
+    ty = r[k - 1][2] + fy[i];
     //判断新的方向可达，且没有访问过
     if (tx >= 1 && tx <= n && ty >= 1 && ty <= n && f[tx][ty] == false) {
-      //标记tx,ty点走过了
+      //存储路径
+      r[k][1] = tx;
+      r[k][2] = ty;
+      //标记 tx,ty 点走过
       f[tx][ty] = true;
-      dfs(tx, ty, k + 1);
-      //递归结束，后退，回溯到前一个状态
+      //如果到了终点
+      if (tx == n && ty == n) {
+        print(k);
+      } else {
+        dfs(k + 1);
+      }
+      //递归结束，回溯到前一个状态
       f[tx][ty] = false;
     }
   }
 }
 int main() {
   cin >> n;
-  //从1,1点开始递归，记录到 r数组下标为1的那一行
+  //存储第1个点
+  r[1][1] = 1;
+  r[1][2] = 1;
   f[1][1] = true;  //标记1,1点走路
-  dfs(1, 1, 1);
+  //从r数组下标为 2 的那一行开始存储路径
+  dfs(2);
   return 0;
 }
